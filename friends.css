@@ -1,0 +1,479 @@
+/* css/style.css - ENHANCED VERSION */
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Rounded MT Bold', 'Segoe UI', sans-serif;
+}
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Rounded MT Bold', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0c1a2d 0%, #1a3a5f 100%); /* Deep blue gradient */
+    color: black; /* Light text for contrast */
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 100vh;
+}
+
+
+/* ===== HEADER - NOW A BANNER ===== */
+header {
+    margin: 30px 0 40px 0;
+    padding: 40px 30px;
+    background: linear-gradient(to right, #2c3e50, #4a6491); /* Strong colored gradient */
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(44, 62, 80, 0.3);
+    border-left: 8px solid #e74c3c; /* Accent stripe */
+}
+
+header h1 {
+    color: #bbbe08;
+    font-size: 3.2em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    color: #ecf0f1;
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+/* ===== NAVIGATION - EYE-CATCHING ===== */
+nav {
+    margin: 40px 0;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid #3498db;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+nav a {
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px; /* Pill-shaped buttons */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.4s ease;
+    display: inline-block;
+    background-color: #f8f9fa;
+    border: 2px solid transparent;
+    min-width: 120px;
+}
+
+nav a:hover {
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient on hover */
+    color: red;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 7px 15px rgba(52, 152, 219, 0.4);
+    border-color: #2980b9;
+}
+
+
+section {
+    background: rgba(255, 255, 255, 0.97); /* Slightly transparent bright white */
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
+    text-align: center;
+    max-width: 850px;
+    border-top: 8px solid #e74c3c;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px); /* Subtle blur effect behind section */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #2ecc71, #e74c3c);
+}
+
+section h2 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px double #eee;
+}
+
+section p {
+    color: #444;
+    font-size: 1.25em;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    text-align: left;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+}
+
+/* ===== IMAGES - CONTROLLED GALLERY ===== */
+figure {
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Consistent space between images */
+}
+
+img {
+    width: 180px; /* Fixed, normal size */
+    height: 180px; /* Makes them square */
+    object-fit: cover; /* Crops the image to fill the square nicely */
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft, elegant shadow */
+    border: 6px solid white; /* Creates a clean white "photo frame" */
+    transition: all 0.3s ease;
+    background-color: #f0f0f0; /* Shows if an image is missing */
+}
+
+img:hover {
+    transform: scale(1.05); /* Very subtle zoom */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    border-color: #eef7ff; /* Optional: light blue frame on hover */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    color: #7f8c8d;
+    font-size: 1em;
+    border-top: 2px solid #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+}/* ===== BACK TO TOP BUTTON ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.7);
+}
+#master-gallery {
+    background: rgba(255, 255, 255, 0.98);
+    margin: 70px auto 40px;
+    padding: 40px 25px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    max-width: 1200px;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#master-gallery h2 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 15px auto 0;
+    line-height: 1.6;
+}
+
+/* Filter Buttons - Now in a scrollable row */
+.gallery-controls {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin: 25px 0 30px;
+    padding: 15px 10px;
+    background: rgba(236, 240, 241, 0.7);
+    border-radius: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #3498db #ecf0f1;
+}
+
+.gallery-controls::-webkit-scrollbar {
+    height: 6px;
+}
+
+.gallery-controls::-webkit-scrollbar-track {
+    background: #ecf0f1;
+    border-radius: 10px;
+}
+
+.gallery-controls::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 10px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 50px;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.filter-btn:hover {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(to right, #2ecc71, #3498db);
+    color: white;
+    border-color: #27ae60;
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+/* HORIZONTAL SCROLL GALLERY */
+.gallery-scroll-container {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.gallery-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #3498db transparent;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-scroll::-webkit-scrollbar-track {
+    background: rgba(236, 240, 241, 0.5);
+    border-radius: 10px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border-radius: 10px;
+}
+
+/* Compact Gallery Items */
+.gallery-item-compact {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 180px;  /* Fixed width */
+    height: 180px; /* Fixed height - square */
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #f8f9fa;
+}
+
+.gallery-item-compact:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.gallery-item-compact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item-compact:hover img {
+    transform: scale(1.1);
+}
+
+.photo-label-compact {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(44, 62, 80, 0.9), transparent);
+    color: white;
+    padding: 15px 10px 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.gallery-item-compact:hover .photo-label-compact {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #2c3e50;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-btn:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-left {
+    left: -20px;
+}
+
+.scroll-right {
+    right: -20px;
+}
+
+/* Footer */
+.gallery-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #ecf0f1;
+}
+
+.memory-count {
+    color: #7f8c8d;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+#photoCount {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* Empty state */
+.empty-gallery {
+    text-align: center;
+    padding: 40px;
+    color: #95a5a6;
+    font-style: italic;
+}
+.music-player {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.music-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #2980b9, #27ae60);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.music-info {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #2c3e50;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    max-width: 200px;
+    text-align: center;}
