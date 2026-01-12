@@ -49,6 +49,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
+            // Add this to script.js for better video handling
+document.addEventListener('DOMContentLoaded', function() {
+    // Lazy load TikTok videos
+    const videoWrappers = document.querySelectorAll('.video-wrapper');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Load TikTok script when video is visible
+                if (!window.tiktokLoaded) {
+                    const script = document.createElement('script');
+                    script.src = 'https://www.tiktok.com/embed.js';
+                    document.body.appendChild(script);
+                    window.tiktokLoaded = true;
+                }
+            }
+        });
+    });
+    
+    videoWrappers.forEach(wrapper => observer.observe(wrapper));
+});
             
             // Close mobile menu if open
             if (window.innerWidth <= 768) {
