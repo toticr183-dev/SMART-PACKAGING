@@ -486,3 +486,34 @@ footer {
     color: #f1c40f; /* Gold color for the price */
     font-weight: bold;
 }
+.nav-phone {
+    margin-left: 20px;
+    color: #2a9d8f; /* Use your brand color */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border: 2px solid #2a9d8f;
+    border-radius: 20px;
+}
+.nav-phone:hover {
+    background-color: #2a9d8f;
+    color: white;
+}
+.video-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f9fa;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+.tiktok-embed {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
